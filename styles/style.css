@@ -18,14 +18,14 @@
   background-color: #f2f2f2;
 }
 
-.header__logo {
+.logo {
   width: 183px;
   height: 32px;
   display: flex;
   position: relative;
 }
 
-.header__logo_place_header {
+.logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
@@ -59,6 +59,7 @@
 
 .header__link {
   text-decoration: none;
+  color: #2f80ed;
 }
 
 .header__main-illustration {
@@ -84,15 +85,13 @@
 }
 
 /* ниже написаны стили для блока description */
-.description {
-  min-height: 425px;
-  max-height: 650px;
+.description{
+  margin-top: 100px;
 }
 
 .two-columns {
   width: 80%;
   padding-top: 0;
-  margin-top: 100px;
   margin-bottom: 0;
   /* ниже написано расположение элементов между собой */
   flex-direction: row;
@@ -108,6 +107,7 @@
   font-size: 18px;
   font-weight: normal;
   color: #2f80ed;
+  margin: 0;
 }
 
 /* стили для второй колонки */
@@ -115,13 +115,15 @@
   align-content: 30px;
   width: 80%;
   margin-bottom: 0;
+  min-width: 784px;
 }
 
 .two-columns__paragraph {
-  min-width: 784px;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .two-columns__span-accent {
@@ -133,6 +135,7 @@
 /* ниже написаны стили для блока с таблицeй "Цифры и факты" */
 .digits {
   margin-bottom: 100px;
+  padding-top: 100px;
 }
 
 .section-title {
@@ -141,8 +144,7 @@
   line-height: 1.15;
   font-size: 60px;
   font-weight: bold;
-  margin-top: 100px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .section-subtitle {
@@ -151,13 +153,9 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  margin-top: 20px;
+  margin: 20px 0 0;
 }
  /* здесь стиль для подзаголовка таблицы "Цифры и факты" */
-.section-subtitle_theme_white {
-  margin-bottom: 60px;
-}
-
 .table {
   display: flex;
   margin: auto;
@@ -167,12 +165,9 @@
 }
 
 /* здесь написан стиль для таблицы "Цифры и факты" */
-.table_theme_white {
+.table__cell {
   width: 250px;
-}
-
-.table__ctll {
-  width: 250px;
+  margin-top: 60px;
   flex-direction: row;
 }
 
@@ -180,31 +175,28 @@
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
+  margin: 0;
 }
 
 .table__text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  margin-top: 20px;
+  margin: 20px 0 20px;
 }
 
 /* ниже написаны стили для блока с Фейнманом */
 .feinman {
-  height: 890px;
+  min-height: 790px;
   display: flex;
   position: relative;
   background-color: #f2f2f2;
   flex-direction: column;
   align-items: center;
-}
-
-/* здесь стили заголовка и подзаголовка в одном блоке */
-.feinman__text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
+  background-image: url(../images/feynman.png);
+  background-size: 867px 637px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
 .feinman__title {
@@ -229,19 +221,11 @@
   font-size: 36px;
   font-weight: normal;
   text-decoration: none;
+  color: #2f80ed;
   display: flex;
   position: absolute;
   top: 50%;
   right: 48px;
-}
-
-.feinman__photo {
-  width: 867px;
-  height: 637px;
-  display: flex;
-  position: absolute;
-  left: 0;
-  bottom: 0;
 }
 
 /* ниже написаны стили для блока с таблицeй "Принципы обучения" */
@@ -258,16 +242,25 @@
 /* здесь написаны только модификаторы */
 .section-title_theme_dark {
   color: white;
+  z-index: 1;
+  padding-top: 90px;
 }
 
 .section-subtitle_theme_dark {
   color: white;
+  z-index: 1;
 }
 
 .kaufman__tringle {
+  width: 877px;
+  height: 877px;
+  background-color: #1f1f1f;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: 877px 877px;
   display: flex;
   position: absolute;
   right: -210px;
+  top: 0;
 }
 
 .table_theme_dark {
@@ -283,12 +276,10 @@
 
 .table__heading_theme_dark {
   color: white;
-  width: 200px;
 }
 
 .table__text_theme_dark {
   color: white;
-  width: 200px;
 }
 
 /* ниже написаны стили для подвала сайта */
@@ -296,7 +287,7 @@
   padding-top: 60px;
   padding-bottom: 40px;
   background-color: #1f1f1f;
-  min-height: 300px;
+  min-height: 350px;
 }
 
 .footer__columns {
@@ -306,15 +297,14 @@
   position: relative;
   margin: auto;
   width: 90%;
-  min-height: 300px;
+  min-height: 250px;
 }
 
 /* стили первой колонки подвала */
-.footer__columns_content_copyright {
+.footer__column_content_copyright {
   flex-basis: 711px;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 .logo_place_footer {
@@ -330,19 +320,19 @@
  font-weight: normal;
  color: white;
  display: flex;
- position: absolute;
- bottom: 0;
- margin-bottom: 0;
+ position: relative;
+ top: 155px;
+ left: 0;
+ margin: 0;
 }
 
 /* стили второй третьей колонки подвала */
-.footer__columns_content_info {
+.footer__column_content_info {
   display: flex;
   flex-direction: column;
-  width: 154px;
 }
 
-.footer__columns_content_social {
+.footer__column_content_social {
   display: flex;
   flex-direction: column;
 }
@@ -357,15 +347,21 @@
 }
 
 .footer__column-links {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 16px;
+}
+
+.footer__column-link {
+  color: white;
+  text-decoration: none;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
-  color: white;
-  text-decoration: none;
-  list-style: none;
 }
 
-.social-icon {
+.footer__social-icon {
   width: 16px;
   height: 16px;
   margin-right: 10px;
