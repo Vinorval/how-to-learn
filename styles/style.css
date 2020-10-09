@@ -49,7 +49,6 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  display: flex;
   /* ниже написано расположение подзаголовка */
   position: absolute;
   bottom: 30px;
@@ -188,6 +187,7 @@
 /* ниже написаны стили для блока с Фейнманом */
 .feinman {
   min-height: 790px;
+  padding-top: 100px;
   display: flex;
   position: relative;
   background-color: #f2f2f2;
@@ -206,7 +206,6 @@
   font-size: 120px;
   font-weight: bold;
   margin: 0;
-  padding-top: 100px;
 }
 
 .feinman__subtitle {
